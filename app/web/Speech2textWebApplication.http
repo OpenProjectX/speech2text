@@ -1,0 +1,20 @@
+//time
+POST http://localhost:8080/v1/audio/transcriptions
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; filename=BBAN-001.m4a; name="audio"
+
+< /home/coder/Videos/BBAN-001.m4a
+--WebAppBoundary
+Content-Disposition: form-data; name="model"
+
+whisper-1
+--WebAppBoundary--
+Content-Disposition: form-data; name="response_format"
+
+srt
+--WebAppBoundary--
+
+###
+
